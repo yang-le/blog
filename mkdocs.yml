@@ -1,0 +1,76 @@
+site_name: 杨乐的个人主页
+site_author: 杨乐
+site_url: https://yang-le.github.io/blog
+site_description: 杨乐的个人主页
+
+copyright: © 2025 Yang Le
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: zh
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.sections
+    # - navigation.expand
+    - navigation.prune
+    - navigation.indexes
+    - navigation.top
+    # - navigation.footer
+    - toc.follow
+    # - header.autohide
+    - content.action.edit
+    - content.action.view
+  favicon: favicon.jpg
+  icon:
+      repo: fontawesome/brands/github
+
+repo_url: https://github.com/yang-le/blog
+edit_uri: edit/main/docs
+
+plugins: 
+  - search
+  - blog:
+      blog_dir: .
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+          remove_comments: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - meta
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
