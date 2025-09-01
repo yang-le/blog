@@ -17,7 +17,7 @@ theme:
         name: Switch to light mode
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default 
+      scheme: default
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -44,12 +44,12 @@ theme:
     - content.action.view
   favicon: favicon.jpg
   icon:
-      repo: fontawesome/brands/github
+    repo: fontawesome/brands/github
 
 repo_url: https://github.com/yang-le/blog
 edit_uri: edit/main/docs
 
-plugins: 
+plugins:
   - search
   - blog:
       blog_dir: .
@@ -58,10 +58,14 @@ plugins:
       minify_js: true
       minify_css: true
       htmlmin_opts:
-          remove_comments: true
+        remove_comments: true
   - git-revision-date-localized:
       enable_creation_date: true
   - meta
+  - mathenv:
+      tikzcd:
+        enable: true
+        cachefile: true
 
 markdown_extensions:
   - pymdownx.arithmatex:
@@ -73,4 +77,5 @@ extra_javascript:
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
 extra_css:
+  - stylesheets/chess.css
   - https://unpkg.com/katex@0/dist/katex.min.css

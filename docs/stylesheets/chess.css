@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'AlphaDia';
+    src: url('https://yang-le.github.io/AlphaDia.otf') format('opentype');
+}
+
+.chess {
+    font-family: "AlphaDia";
+    line-height: normal;
+}
