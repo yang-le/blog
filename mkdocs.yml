@@ -79,3 +79,8 @@ extra_javascript:
 extra_css:
   - stylesheets/chess.css
   - https://unpkg.com/katex@0/dist/katex.min.css
+
+extra:
+  analytics:
+    provider: google
+    property: G-D89P1CFJH4
