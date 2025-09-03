@@ -3,7 +3,7 @@ site_author: 杨乐
 site_url: https://yang-le.github.io/blog
 site_description: 杨乐的个人主页
 
-copyright: © 2025 Yang Le
+copyright: Copyright &copy; 2025 Yang Le
 
 theme:
   name: material
@@ -68,6 +68,9 @@ plugins:
         cachefile: true
 
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
 
