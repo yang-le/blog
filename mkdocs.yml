@@ -50,7 +50,8 @@ repo_url: https://github.com/yang-le/blog
 edit_uri: edit/main/docs
 
 plugins:
-  - search
+  - search:
+      lang: zh
   - blog:
       blog_dir: .
   - minify:
