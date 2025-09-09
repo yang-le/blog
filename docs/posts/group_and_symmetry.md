@@ -18,6 +18,18 @@ categories:
 
 <!-- more -->
 
+<style>
+@font-face {
+    font-family: 'AlphaDia';
+    src: url('https://yang-le.github.io/AlphaDia.otf') format('opentype');
+}
+
+.chess {
+    font-family: "AlphaDia";
+    line-height: normal;
+}
+</style>
+
 群论的目标
 
 - 分类所有的群（在同构的意义下）

@@ -63,10 +63,7 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
   - meta
-  - mathenv:
-      tikzcd:
-        enable: true
-        cachefile: true
+  - mathenv
 
 markdown_extensions:
   - admonition
@@ -74,6 +71,9 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
 
 extra_javascript:
   - javascripts/katex.js
@@ -81,7 +81,6 @@ extra_javascript:
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
 extra_css:
-  - stylesheets/chess.css
   - https://unpkg.com/katex@0/dist/katex.min.css
 
 extra:
