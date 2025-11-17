@@ -34,5 +34,5 @@ jobs:
           mkdocs-minify-plugin \
           mkdocs-git-revision-date-localized-plugin \
           git+https://github.com/FrightenedFoxCN/mkdocs-mathenv-plugin
-      - run: sudo apt install -y texlive-xetex dvisvgm
+      - run: sudo apt install -y texlive-xetex dvisvgm pngquant
       - run: mkdocs gh-deploy --force

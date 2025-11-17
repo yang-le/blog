@@ -29,6 +29,8 @@ theme:
         name: Switch to system preference
   features:
     - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.preview
     - navigation.instant.progress
     - navigation.tabs
     # - navigation.tabs.sticky
@@ -64,6 +66,7 @@ plugins:
       enable_creation_date: true
   - meta
   - mathenv
+  - optimize
 
 markdown_extensions:
   - admonition
