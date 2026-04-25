@@ -9,7 +9,7 @@ categories:
 
 # 寒食帖
 
-![](../assets/images/hst1.png){loading=lazy}
+![](https://yang-le.github.io/blog/assets/images/hst1.png){loading=lazy}
 
 <!-- more -->
 
@@ -17,7 +17,7 @@ categories:
 
 雪堂余韵
 
-![](../assets/images/hst2.png){loading=lazy}
+![](https://yang-le.github.io/blog/assets/images/hst2.png){loading=lazy}
 
 自我來黃州，已過三寒食。年年欲惜春，春去不容惜。今年又苦雨，兩月秋蕭瑟。臥聞海棠花，泥污燕支雪。闇中偷負去，夜半真有力。何殊病少年，子（點去）病起頭已白。
 

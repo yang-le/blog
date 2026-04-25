@@ -243,7 +243,7 @@ $$\sum_a\vec F_a = 0$$
 各向同性意味着封闭系统整体在空间中任意转动时，力学性质保持不变。因此，我们研究系统整体的无穷小转动并求出拉格朗日函数保持不变的条件。
 我们引入无穷小转动矢量$\delta\vec\varphi$，其大小等于转角$\delta\varphi$，方向沿着转动轴(转动方向与$\delta\vec\varphi$的方向之间符合右手螺旋法则)。
 
-![矢径端点的线位移与转角的关系](../assets/images/c2ec3a7999d241b48d77a5de42770883.png){loading=lazy}
+![矢径端点的线位移与转角的关系](https://yang-le.github.io/blog/assets/images/c2ec3a7999d241b48d77a5de42770883.png){loading=lazy}
 /// caption
 矢径端点的线位移与转角的关系
 ///

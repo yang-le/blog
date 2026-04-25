@@ -290,7 +290,7 @@ $$\lambda_n = a_n ~ \forall n \ge 1, (n, N) = 1$$
     
     （Maass形式的情形则有$|a_p| \le 2$）。
 
-![比利时邮局为纪念Deligne证明了Ramanujan猜想而发行的邮票](../assets/images/20210215183613239.gif){loading=lazy}
+![比利时邮局为纪念Deligne证明了Ramanujan猜想而发行的邮票](https://yang-le.github.io/blog/assets/images/20210215183613239.gif){loading=lazy}
 /// caption
 比利时邮局为纪念Deligne证明了Ramanujan猜想而发行的邮票
 ///
