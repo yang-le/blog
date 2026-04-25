@@ -29,6 +29,8 @@ theme:
         name: Switch to system preference
   features:
     - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.preview
     - navigation.instant.progress
     - navigation.tabs
     # - navigation.tabs.sticky
@@ -62,10 +64,11 @@ plugins:
         remove_comments: true
   - git-revision-date-localized:
       enable_creation_date: true
-  - meta
-  - mathenv
   - glightbox:
       manual: true
+  - meta
+  - mathenv
+  - optimize
 
 markdown_extensions:
   - admonition
