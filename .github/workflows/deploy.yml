@@ -31,6 +31,7 @@ jobs:
             mkdocs-material-
       - run: pip install jieba \
           mkdocs-material \
+          mkdocs-glightbox \
           mkdocs-minify-plugin \
           mkdocs-git-revision-date-localized-plugin \
           git+https://github.com/FrightenedFoxCN/mkdocs-mathenv-plugin

@@ -64,6 +64,8 @@ plugins:
       enable_creation_date: true
   - meta
   - mathenv
+  - glightbox:
+      manual: true
 
 markdown_extensions:
   - admonition
