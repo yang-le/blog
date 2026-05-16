@@ -45,6 +45,7 @@ theme:
     - content.action.edit
     - content.action.view
     - content.tooltips
+    - content.code.annotate
   favicon: favicon.jpg
   icon:
     repo: fontawesome/brands/github
