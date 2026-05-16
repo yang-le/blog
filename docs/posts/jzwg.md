@@ -9,7 +9,7 @@ categories:
 
 # 祭侄文稿
 
-![](https://yang-le.github.io/blog/assets/images/jzwg.png){loading=lazy}
+![](https://yang-le.github.io/blog/assets/images/jzwg.jpg){loading=lazy}
 
 <!-- more -->
 
