@@ -30,7 +30,7 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install jieba \
-          mkdocs-material \
+          mkdocs-material[imaging] \
           mkdocs-glightbox \
           mkdocs-minify-plugin \
           mkdocs-git-revision-date-localized-plugin \
