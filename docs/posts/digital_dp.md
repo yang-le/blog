@@ -299,6 +299,7 @@ return dfs(0, true, false);
 - [统计强大整数的数目](https://leetcode.cn/problems/count-the-number-of-powerful-integers/description/)
 - [统计整数数目](https://leetcode.cn/problems/count-of-integers/description/)
 - [统计美丽整数的数目](https://leetcode.cn/problems/count-beautiful-numbers/description/)
+- [最小可整除数位乘积 II](https://leetcode.cn/problems/smallest-divisible-digit-product-ii/description/)
 
 === "统计强大整数的数目"
 
@@ -421,6 +422,81 @@ return dfs(0, true, false);
                 return ans;
             };
             return dfs(0, 0, 1, true, true);
+        }
+    };
+    ```
+
+=== "最小可整除数位乘积 II"
+
+    ``` cpp
+    class Solution {
+    public:
+        string smallestNumber(string num, long long t) {
+            long long tmp = t;
+            int c2 = 0, c3 = 0, c5 = 0, c7 = 0;
+            while (tmp % 2 == 0) {
+                tmp /= 2;
+                ++c2;
+            }
+            while (tmp % 3 == 0) {
+                tmp /= 3;
+                ++c3;
+            }
+            while (tmp % 5 == 0) {
+                tmp /= 5;
+                ++c5;
+            }
+            while (tmp % 7 == 0) {
+                tmp /= 7;
+                ++c7;
+            }
+            if (tmp > 1)
+                return "-1";
+            int n = max(c2 + c3 + c5 + c7, (int)num.size() + 1);
+            int diff_lh = n - num.size();
+            string ans;
+
+            constexpr int tbl[][4] = {
+                {0, 0, 0, 0},
+                {0, 0, 0, 0},
+                {1, 0, 0, 0},
+                {0, 1, 0, 0},
+                {2, 0, 0, 0},
+                {0, 0, 1, 0},
+                {1, 1, 0, 0},
+                {0, 0, 0, 1},
+                {3, 0, 0, 0},
+                {0, 2, 0, 0}
+            };
+
+            vector vis(c7 + 1, vector(c5 + 1, vector(c3 + 1, vector(c2 + 1, vector<bool>(n)))));
+            auto dfs = [&](this auto&& dfs, int i, int c2, int c3, int c5, int c7, bool limit_low) -> bool {
+                if (i == n)
+                    return !c2 && !c3 && !c5 && !c7;
+
+                if (!limit_low) {
+                    if (vis[c7][c5][c3][c2][i])
+                        return false;
+                    vis[c7][c5][c3][c2][i] = true;
+                }
+
+                if (limit_low && i < diff_lh && dfs(i + 1, c2, c3, c5, c7, true)) // 前导0跳过
+                    return true;
+
+                int lo = (limit_low && i >= diff_lh) ? num[i - diff_lh] - '0' : 0;
+                for (int d = max(lo, 1); d < 10; ++d)
+                    if (dfs(i + 1, max(0, c2 - tbl[d][0]), max(0, c3 - tbl[d][1]), max(0, c5 - tbl[d][2]), max(0, c7 - tbl[d][3]), limit_low && d == lo)) {
+                        ans += d + '0';
+                        return true;
+                    }
+
+                return false;
+            };
+            
+            // 一定可以找到
+            dfs(0, c2, c3, c5, c7, true);
+            ranges::reverse(ans);
+            return ans;
         }
     };
     ```
