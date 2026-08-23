@@ -51,15 +51,15 @@ $$f(t) = \sum_{s \preccurlyeq t}g(s)\mu(s, t), ~ \forall t \in P$$
 
 在这个偏序集设定下，有
 
-$$\mu(s, u) = - \sum_{s \le t < u}\mu(s, t), ~ \forall s < u$$
+$$\mu(s, u) = -\sum_{s \le t < u}\mu(s, t), ~ \forall s < u$$
 
-所以$\mu(s, s + k) = -[\mu(s, s) + \mu(s, s + 1) + \cdots \mu(s, s + k - 1)]$，其中$k \ge 1$.
+所以$\mu(s, s + k) = -[\mu(s, s) + \mu(s, s + 1) + \cdots + \mu(s, s + k - 1)]$，其中$k \ge 1$.
 
 当$k = 1$时，$\mu(s, s + 1) = -\mu(s, s) = -1$.
 
 而当$k \ge 2$时有递推关系$\mu(s, s + k) = \mu(s, s + k - 1) - \mu(s, s + k - 1) = 0$.
 
-故这里的$\mu(s, u)$可以显示定义为
+故这里的$\mu(s, u)$可以显式定义为
 
 $$\mu(s, u) = \begin{cases}
 1, &u = s \\
@@ -81,7 +81,7 @@ $$f(t) = \sum_{s \le t}g(s)\mu(s, t) = g(t) - g(t - 1)$$
 
 在这个偏序集设定下，有
 
-$$\mu(A, B) = - \sum_{A \subseteq C \subset B}\mu(A, C), ~ \forall A \subset B$$
+$$\mu(A, B) = -\sum_{A \subseteq C \subset B}\mu(A, C), ~ \forall A \subset B$$
 
 可以用归纳法证明$\mu(A, B) = (-1)^{|B| - |A|}, ~ \forall A \subseteq B$
 
@@ -107,7 +107,7 @@ $$\mu(A, B) = - \sum_{A \subseteq C \subset B}\mu(A, C), ~ \forall A \subset B$$
 
     因此
 
-    $$\mu(A, B) = - \sum_{A \subseteq C \subset B}\mu(A, C) = (-1)^d = (-1)^{|B| - |A|}$$
+    $$\mu(A, B) = -\sum_{A \subseteq C \subset B}\mu(A, C) = (-1)^d = (-1)^{|B| - |A|}$$
 
 考虑一个新的偏序关系$\supseteq$，它定义为$A \supseteq B$当且仅当$B \subseteq A$。莫比乌斯反演关系在这个偏序下表现为
 
@@ -169,3 +169,96 @@ $$g(\empty) - f(\empty) = \sum_{A \neq \empty}(-1)^{|A| + 1}g(A)$$
 $$|E \cup F \cup G| = |E| + |F| + |G| - |E \cap G| - |E \cap F| - |F \cap G| + |E \cap F \cap G|$$
 
 这正是容斥原理，幂集上的莫比乌斯反演的一个特殊情况。
+
+### 正整数集$\Z^+$及其上的偏序关系$\mid$
+
+其中$a \mid b$表示$a$整除$b$，在这个偏序集设定下，有
+
+$$\mu(a, b) = -\sum_{a \mid c \mid b, ~ c \neq b}\mu(a, c), ~ \forall a \mid b, ~ a \neq b$$
+
+!!! note "定理"
+
+    $$\mu(d, dt) = \mu(1, t), ~ \forall d, t \in \Z^+$$
+
+??? info "证明"
+
+    当$t = 1$时，命题显然成立。
+
+    假设对所有满足$j < t$的正整数$j$，有$\mu(d, dj) = \mu(1, j)$
+
+    根据定义
+    
+    $$\mu(d, dt) = -\sum_{d \mid k \mid dt, ~ k < dt}\mu(d, k)$$
+
+    令$k = dj$，则
+
+    $$\mu(d, dt) = -\sum_{j \mid t, ~ j < t}\mu(d, dj) = -\sum_{j \mid t, ~ j < t}\mu(1, j) = \mu(1, t)$$
+
+    证毕。
+
+因此我们只需考虑$a =  1$的情形，这也是数论中最关心的情况，下面就将$\mu(1, n)$简记为$\mu(n)$. 当$n \neq 1$时
+
+$$\mu(n) = -\sum_{d \mid n, ~ d \neq n}\mu(d)$$
+
+而当$n = 1$时根据定义$\mu(1) = \mu(1, 1) = 1$. 这两种情况可以归纳为一个式子
+
+$$\sum_{d \mid n}\mu(d) = [n = 1]$$
+
+如果读者熟悉Dirichlet卷积，这表明$\mu$是常值函数$1$在Dirichlet卷积下的逆元。
+
+来算几个$\mu$函数的值：
+
+- $n = p$
+
+    唯一能整除质数的正整数是$1$，所以:
+
+    $\mu(p) = -\mu(1) = -1$
+- $n = p^2$
+
+    因子有$1, p$
+
+    $\mu(p^2) = -[\mu(1) + \mu(p)] = 0$
+
+- $n = p ^ k, k > 1$
+
+    因子有$1, p, \dots, p^{k - 1}$
+
+    $\mu(p^k) = -[\mu(1) + \mu(p) + \cdots + \mu(p^{k - 1})]$
+
+    有递推关系$\mu(p^k) = \mu(p^{k - 1}) - \mu(p^{k - 1}) = 0$
+
+- $n = pq$
+
+    因子有$1, p, q$
+
+    $\mu(pq) = -[\mu(1) + \mu(p) + \mu(q)] = 1$
+
+- $n = p^2q$
+
+    因子有$1, p, q, p^2, pq$
+
+    $\mu(p^2q) = -[\mu(1) + \mu(p) + \mu(q) + \mu(p^2) + \mu(pq)] = 0$
+
+- $n = pqr$
+
+    因子有$1, p, q, r, pq, pr, qr$
+
+    $\mu(pq) = -[\mu(1) + \mu(p) + \mu(q) + \mu(r) + \mu(pq) + \mu(pr) + \mu(qr)] = -1$
+
+一般地，可以用归纳法证明：
+
+$$\mu(n) = \begin{cases}
+1, &n = 1 \\
+(-1)^k, & n = p_1p_2\cdots p_k \\
+0, & n含有平方质因子
+\end{cases}$$
+
+莫比乌斯反演关系表现为
+
+$$g(n) = \sum_{d \mid n}f(d)$$
+
+当且仅当
+
+$$f(n) = \sum_{d \mid n}g(d)\mu(d, n) = \sum_{d \mid n}\mu(\frac{n}{d})g(d)$$
+
+这正是数论中的莫比乌斯反演定理。
