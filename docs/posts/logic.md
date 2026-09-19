@@ -158,3 +158,5 @@ $$s, \neg s, q$$
     任何蕴含皮亚诺算术公理的公理系统要么是不相容的，要么包含一个不可判定的命题，即存在一个命题既不能由该系统证明，也不能由该系统证否。
 
 连续统假设就是不可判定命题的一个例子，在集合论的ZF公理系统中，它既不能被证明，也不能被证否。
+
+> 翻译自 https://mathswithphysics.blogspot.com/2016/07/lectures-on-geometric-anatomy-of.html

@@ -281,13 +281,13 @@ $\N$上的后继映射$S: \N \to \N$定义为
 
 $$S(n) := n \cup \{n\}$$
 
-$N^*$上的前驱映射$P: \N^* \to N$定义为
+$\N^*$上的前驱映射$P: \N^* \to \N$定义为
 
 $$P(n) := \bigcup n$$
 
-这里$N^*$表示$\N \setminus \{0\}$. 此外，我们递归地定义$S^n$为：
+这里$\N^*$表示$\N \setminus \{0\}$. 此外，我们递归地定义$S^n$为：
 
-$$\begin{align*}S^n &:= S \circ S^{P(n)}, ~ n \in N^*\\
+$$\begin{align*}S^n &:= S \circ S^{P(n)}, ~ n \in \N^*\\
 S^0 &:= \mathrm{id}_\N\end{align*}$$
 
 现在我们可以定义加法。$\N$上的加法操作是一个映射$+:\N \times \N \to \N$，定义为
@@ -341,3 +341,5 @@ $$[(p, q)] \cdot_{\mathbb Q} [(r, s)] := [(pr, qs)]$$
 $$\R := \mathscr A / \sim$$
 
 其中$\sim$是$\mathscr A$上的一个“适当”的等价关系。详见[R.D. Arthan. The Eudoxus Real Numbers](https://arxiv.org/abs/math/0405454)和[Norbert A'Campo. A natural construction for the real numbers](https://arxiv.org/abs/math/0301015).
+
+> 翻译自 https://mathswithphysics.blogspot.com/2016/07/lectures-on-geometric-anatomy-of.html
