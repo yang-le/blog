@@ -159,4 +159,4 @@ $$s, \neg s, q$$
 
 连续统假设就是不可判定命题的一个例子，在集合论的ZF公理系统中，它既不能被证明，也不能被证否。
 
-> 翻译自 https://mathswithphysics.blogspot.com/2016/07/lectures-on-geometric-anatomy-of.html
+> 翻译自 [https://mathswithphysics.blogspot.com/2016/07/lectures-on-geometric-anatomy-of.html](https://mathswithphysics.blogspot.com/2016/07/lectures-on-geometric-anatomy-of.html)

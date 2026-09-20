@@ -342,4 +342,4 @@ $$\R := \mathscr A / \sim$$
 
 其中$\sim$是$\mathscr A$上的一个“适当”的等价关系。详见[R.D. Arthan. The Eudoxus Real Numbers](https://arxiv.org/abs/math/0405454)和[Norbert A'Campo. A natural construction for the real numbers](https://arxiv.org/abs/math/0301015).
 
-> 翻译自 https://mathswithphysics.blogspot.com/2016/07/lectures-on-geometric-anatomy-of.html
+> 翻译自 [https://mathswithphysics.blogspot.com/2016/07/lectures-on-geometric-anatomy-of.html](https://mathswithphysics.blogspot.com/2016/07/lectures-on-geometric-anatomy-of.html)
