@@ -77,9 +77,7 @@ $$l_g(r_h(s)) = g(sh) = (gs)h = r_h(l_g(s))$$
 
 或者说下图是交换的
 
-\tikzcd
-    & s \arrow[r, "r_h"] \arrow[ld, "l_g"'] & sh \arrow[ld, "l_g"] \\
-    gs \arrow[r, "r_h"] & gsh &
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMSwwLCJzIl0sWzIsMCwic2giXSxbMCwxLCJncyJdLFsxLDEsImdzaCJdLFswLDEsInJfaCJdLFswLDIsImxfZyIsMl0sWzEsMywibF9nIl0sWzIsMywicl9oIl1d&embed" width="432" height="304" style="border-radius: 8px; border: none;"></iframe>
 
 于是我们可以将$G$看作是带有额外结构（右作用）的一个对象（$G$视作集合）的所有对称性（在左作用下不变）。
 另一方面，假设$f$是$G$的保持右作用的一个对称性，则$f(s) = f(1s) = f(1)s$. 即$f$不外就是左乘$f(1)$，因此是$G$的一个元素。
